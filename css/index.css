@@ -44,8 +44,13 @@ body {
 .header-content {
     /* split into two columns  with grid*/
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding-left: 7vw;
+    grid-template-columns: 0.2fr 1fr;
+    padding-left: 1vw;
+}
+
+.logo {
+    width: 7em;
+    left: 0;
 }
 
 h1 {
