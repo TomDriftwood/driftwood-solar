@@ -9,8 +9,8 @@
 
 /* set variables for colors*/
 :root {
-    --color-primary: #0850F7;
-    --color-secondary: #34e0a1;
+    --color-primary: #242636;
+    --color-secondary: #e3b753;
     --text-primary: #ffffff;
     --text-secondary: #565656;
 }
@@ -31,8 +31,8 @@
 .header :hover {
     top: 0px;
     left: 0px;
-    background-color: #ffffff;
-    color: #000000;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
     /* fade in the background color when hovering*/
     transition: background-color 0.5s;
 }
@@ -46,11 +46,6 @@ body {
     display: grid;
     grid-template-columns: 0.2fr 1fr;
     padding-left: 1vw;
-}
-
-.logo {
-    width: 7em;
-    left: 0;
 }
 
 h1 {
@@ -79,4 +74,12 @@ h1 {
     font-family: Space-Grotesk;
     text-align: center;
     font-size: 3em;
+}
+.logo {
+    width: 7em;
+    left: 0;
+}
+
+#homeHeading {
+    padding-top: 3vh;
 }
