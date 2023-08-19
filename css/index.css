@@ -10,6 +10,7 @@
 /* set variables for colors*/
 :root {
     --color-primary: #242636;
+    --color-accent: #2e3145;
     --color-secondary: #e3b753;
     --text-primary: #ffffff;
     --text-secondary: #565656;
@@ -32,7 +33,6 @@
     top: 0px;
     left: 0px;
     background-color: var(--color-primary);
-    color: var(--color-secondary);
     /* fade in the background color when hovering*/
     transition: background-color 0.5s;
 }
@@ -44,7 +44,7 @@ body {
 .header-content {
     /* split into two columns  with grid*/
     display: grid;
-    grid-template-columns: 0.2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     padding-left: 1vw;
 }
 
@@ -75,11 +75,45 @@ h1 {
     text-align: center;
     font-size: 3em;
 }
+
 .logo {
-    width: 7em;
+    width: 9vw;
+    min-width: 180px;
     left: 0;
 }
 
 #homeHeading {
     padding-top: 3vh;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-item :hover {
+    color: var(--color-secondary);
+    /* set the padding around the link*/
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    background-color: var(--color-accent);
+    border-radius: 10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-family: Space-Grotesk;
+    font-size: 1em;
+    padding: 0.5em;
+}
+
+#about-icon {
+    /* snap icon to the right*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 0;
+    font-size: 1.3em;
 }
