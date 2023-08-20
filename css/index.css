@@ -211,6 +211,8 @@ ul li ul:hover {
     align-items: center;
     margin-right: 0;
     font-size: 1em;
+    color: var(--text-primary);
+    text-decoration: none;
 }
 
 .hero-info-icons {
