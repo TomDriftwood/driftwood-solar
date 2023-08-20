@@ -223,7 +223,7 @@ ul li ul:hover {
     justify-items: center;
     /* place it below the hero title*/
     position: absolute;
-    top: 77%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, 50%);
     /* space between the icons*/
@@ -245,31 +245,6 @@ ul li ul:hover {
     color: var(--text-primary);
 }
 
-.hero-start-button {
-    /* center the button*/
-    position: absolute;
-    top: 92%;
-    left: 46%;
-}
-
-#main-button {
-    background-color: var(--color-primary);
-    color: var(--text-primary);
-    font-family: Space-Grotesk;
-    font-size: 1em;
-    padding: 0.7em 1em 0.7em 1em;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-}
-
-#main-button :hover {
-    background-color: var(--color-accent);
-
-}
-
-
-
 
 /*-------------------REASONS-------------------*/
 
@@ -281,14 +256,14 @@ ul li ul:hover {
     background-color: var(--color-primary);
     color: var(--text-primary);
     font-family: Space-Grotesk;
-    font-size: 2em;
+    font-size: 1.2em;
     /* padding: 5vh 7vw;*/
 }
 
-.info-reasons-markup{
-    font-size: 0.8em;
+.info-reasons-markup {
+    font-size: 0.9em;
     font-weight: 400;
-    line-height: 1.5em;
+    line-height: 1.6em;
 }
 
 .side-by-side {
@@ -308,7 +283,7 @@ ul li ul:hover {
 }
 
 .expand-icon {
-    font-size: 2em;
+    font-size: 1.6em;
     text-decoration: none;
     color: var(--text-primary);
     font-variation-settings: 'FILL' 0;
@@ -321,7 +296,7 @@ ul li ul:hover {
     transition: font-variation-settings 0.3s;
 }
 
-.modal-overlay{
+.modal-overlay {
     position: fixed;
     top: 10vh;
     left: 10%;
@@ -335,7 +310,7 @@ ul li ul:hover {
     /* zoom and fade in the modal in 0.3 seconds*/
 }
 
-.modal-backdrop{
+.modal-backdrop {
     display: none;
     position: fixed;
     top: 0;
@@ -359,12 +334,13 @@ ul li ul:hover {
 }
 
 .modal-text {
-    font-size: 0.8em;
+    font-size: 1em;
     font-weight: 400;
+    line-height: 1.6em;
 }
 
 .close-icon {
-    font-size: 2em;
+    font-size: 1.6em;
     text-decoration: none;
     color: var(--text-primary);
     font-variation-settings: 'FILL' 0;
