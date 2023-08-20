@@ -11,25 +11,28 @@ $(document).ready(function () {
     // and 'expand-speed'
     $('#expand-money').click(function () {
         // find closest element with class 'modal-backdrop' and set display to 'block'
-
+        $('#modal-money').css('display', 'block');
         console.log('expand-money clicked');
     });
     $('#expand-efficiency').click(function () {
+        $('#modal-efficiency').css('display', 'block');
         console.log('expand-efficency clicked');
     });
     $('#expand-speed').click(function () {
+        // set display: block for #modal-speed
+        $('#modal-speed').css('display', 'block');
         console.log('expand-speed clicked');
     });
 
 
     // add event listener to the buttons with id 'close-modal'
-    $('#close-modal').click(function () {
-        // do something
-        console.log('close-modal clicked');
-        // set display of '.modal-backdrop' to 'none'
-        $('.modal-backdrop').css('display', 'none');
+    $('#close-modal-speed').click(function () {
+        $('#modal-speed').css('display', 'none');
     });
-
-
-
+    $('#close-modal-money').click(function () {
+        $('#modal-money').css('display', 'none');
+    });
+    $('#close-modal-efficiency').click(function () {
+        $('#modal-efficiency').css('display', 'none');
+    });
 });
