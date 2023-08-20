@@ -306,3 +306,78 @@ ul li ul:hover {
     object-fit: cover;
     right: 0;
 }
+
+.expand-icon {
+    font-size: 2em;
+    text-decoration: none;
+    color: var(--text-primary);
+    font-variation-settings: 'FILL' 0;
+    cursor: pointer;
+}
+
+.expand-icon-span :hover {
+    font-variation-settings: 'FILL' 1;
+    /* fade as transition*/
+    transition: font-variation-settings 0.3s;
+}
+
+.modal-overlay{
+    position: fixed;
+    top: 10vh;
+    left: 10%;
+    width: 80%;
+    height: 80vh;
+    /* set the background color*/
+    background-color: var(--color-primary);
+    border-radius: 25px;
+    z-index: 2;
+    /* add a transition effect*/
+    /* zoom and fade in the modal in 0.3 seconds*/
+}
+
+.modal-backdrop{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* set the background color*/
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 1;
+}
+
+.modal-content {
+    padding: 2vw 5vw 4vw 4vw;
+}
+
+.modal-title {
+    font-size: 1.7em;
+    font-weight: 600;
+    line-height: 1em;
+}
+
+.modal-text {
+    font-size: 0.8em;
+    font-weight: 400;
+}
+
+.close-icon {
+    font-size: 2em;
+    text-decoration: none;
+    color: var(--text-primary);
+    font-variation-settings: 'FILL' 0;
+    cursor: pointer;
+    position: absolute;
+    /* stick to the right*/
+    right: 2vh;
+    bottom: 1.8vh;
+
+}
+
+.close-icon-span :hover {
+    font-variation-settings: 'FILL' 1;
+    /* fade as transition*/
+    transition: font-variation-settings 0.3s;
+}
