@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="css/index.css">
-<script src="js/index.js"></script>
 
 <head>
     <meta charset="utf-8">
@@ -9,29 +7,53 @@
 
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js"></script>
 
 <body>
     <!--This is the header-->
     <div class="header">
         <div class="header-content">
             <img src="assets/images/logo_round.png" alt="Driftwood Solar Logo" class="logo">
-            <div class="header-nav">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">Planung</a>
+            <nav role="navigation">
+                <ul>
+                    <li><a href="#">Planung</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Projektablauf</a></li>
+                            <li><a href="#">Kosten</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">Anlagetypen</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Balkonkraftwerke</a></li>
+                            <li><a href="#">Einfache PV-Anlagen</a></li>
+                            <li><a href="#">Smarte PV-Anlagen</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">Komponenten</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Solarzellen</a></li>
+                            <li><a href="#">Wechselrichter</a></li>
+                            <li><a href="#">Batterien</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">Strommarkt</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Strompreise</a></li>
+                            <li><a href="#">Wie entwickeln sich die Strompreise in der Zukunft</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
                 </li>
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link">Typen</a>
-                </li>
-                <li class="nav-item">
-                    <a href="services.html" class="nav-link">Komponenten</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="nav-link">Strommarkt</a>
-            </div>
-            <span id="about-icon" class="material-symbols-rounded">
+                </ul>
+            </nav>
+            <span class="material-symbols-rounded" id="about-icon">
                 info
             </span>
         </div>

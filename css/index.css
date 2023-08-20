@@ -21,17 +21,17 @@
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 5vh !important;
+    height: 5vw;
+    min-height: 100px;
     font-family: Space-Grotesk;
     font-size: 1.5em;
     color: var(--text-primary);
     /* make the white background transparent when not hovering*/
     background-color: rgba(255, 255, 255, 0);
+    z-index: 1;
 }
 
 .header :hover {
-    top: 0px;
-    left: 0px;
     background-color: var(--color-primary);
     /* fade in the background color when hovering*/
     transition: background-color 0.5s;
@@ -100,28 +100,109 @@ h1 {
     padding-top: 3vh;
 }
 
-.header-nav {
+
+/*-------------------NAVIGATION-------------------*/
+
+nav {
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.3px;
+    font-weight: 400;
+}
+
+ul {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-flow: row wrap;
     list-style: none;
+    margin-top: 3vh;
+    /* center the list*/
+    justify-content: center;
+    align-items: center;
 }
 
-.nav-item :hover {
-    color: var(--color-secondary);
-    /* set the padding around the link*/
-    padding: 0.3em 0.5em 0.3em 0.5em;
-    background-color: var(--color-accent);
-    border-radius: 10px;
-}
-
-.nav-link {
-    text-decoration: none;
+li {
     color: var(--text-primary);
-    font-family: Space-Grotesk;
-    font-size: 0.7em;
-    padding: 0.5em;
+    background: transparent;
+    font-size: 1.2em;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 25px;
 }
+
+li a {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+li :hover {
+    color: var(--color-secondary);
+}
+
+.dropdown {
+    max-height: 50vh;
+    left: 0;
+    width: 100%;
+    overflow-y: auto;
+    background: var(--color-primary);
+}
+
+.dropdown p {
+    display: block;
+    padding: 10px 25px;
+}
+
+.dropdown p::before {
+    position: absolute;
+    content: "";
+    height: 1px;
+    background-color: var(--color-primary);
+    width: 100%;
+    padding: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.dropdown > li {
+    background: var(--color-primary);
+    padding-left: 36%;
+    font-size: 1em;
+    color: var(--text-secondary);
+}
+
+.dropdown > li:first-child {
+    margin-top: 10px;
+}
+
+.dropdown > li:last-child {
+    margin-bottom: 10px;
+}
+
+.dropdown > li:hover {
+    background: var(--color-primary);
+}
+
+li:hover {
+    background: var(--color-primary);
+    cursor: pointer;
+}
+
+ul li ul {
+    position: absolute;
+    opacity: 0;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    transform: translateX(-25px);
+    display: none;
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+/*-------------------HERO-------------------*/
 
 #about-icon {
     /* snap icon to the right*/
@@ -129,7 +210,7 @@ h1 {
     justify-content: space-around;
     align-items: center;
     margin-right: 0;
-    font-size: 1.1em;
+    font-size: 1em;
 }
 
 .hero-info-icons {
@@ -157,19 +238,19 @@ h1 {
     color: var(--text-primary);
 }
 
-.hero-info-item{
+.hero-info-item {
     font-family: Space-Grotesk;
     color: var(--text-primary);
 }
 
-.hero-start-button{
+.hero-start-button {
     /* center the button*/
     position: absolute;
     top: 92%;
     left: 46%;
 }
 
-#main-button{
+#main-button {
     background-color: var(--color-primary);
     color: var(--text-primary);
     font-family: Space-Grotesk;
@@ -180,9 +261,9 @@ h1 {
     cursor: pointer;
 }
 
-#main-button :hover{
+#main-button :hover {
     background-color: var(--color-accent);
-    
+
 }
 
 
@@ -211,7 +292,7 @@ h1 {
     padding: 2vw 5vw 2vw 2vw;
 }
 
-.info-reasons-image{
+.info-reasons-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
