@@ -326,6 +326,8 @@ ul li ul:hover {
 
 .modal-content {
     padding: 2vw 5vw 4vw 4vw;
+    overflow-y: auto;
+    height: 90%;
 }
 
 .modal-title {
