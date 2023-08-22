@@ -155,11 +155,11 @@ $(document).ready(function () {
         }
     </style>
      <div class="header-content">
-            <img src="assets/images/logo_round.png" alt="Driftwood Solar Logo" class="logo">
+            <img src="assets/images/logo_round.webp" alt="Driftwood Solar Logo" class="logo">
             <nav role="navigation">
                 <ul>
                     <li><a
-                            href="https://www.notion.so/valentinfrlch/Planung-Kosten-813126c4f9864b6d963c1f7de4960b45">Planung</a>
+                            href="subpages/Selbstbau Photovoltaikanlage.html">Planung</a>
                         <ul class="dropdown">
                             <li><a
                                     href="https://www.notion.so/valentinfrlch/Planung-Kosten-813126c4f9864b6d963c1f7de4960b45?pvs=4#815d6fdad2d44befa6157c74ec9754d2">Projektablauf</a>
