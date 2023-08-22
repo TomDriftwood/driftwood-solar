@@ -4,167 +4,25 @@
 $(document).ready(function () {
     // get the div with class='header'
     const header = document.querySelector('.header-component');
-    const styleElement = document.querySelector('head style');
-    style = `
-        <style>
-            .header-component {
-                position: fixed;
-                top: 0px;
-                left: 0px;
-                width: 100%;
-                height: 5vw;
-                min-height: 100px;
-                font-family: Space-Grotesk;
-                font-size: 1.5em;
-                color: var(--text-primary);
-                /* make the white background transparent when not hovering*/
-                background-color: rgba(255, 255, 255, 0);
-                z-index: 1;
-            }
-
-                .header-component :hover {
-                    background - color: var(--color-primary);
-                /* fade in the background color when hovering*/
-                transition: background-color 0.5s;
-            }
-
-                .header-content {
-                    display: grid;
-                grid-template-columns: 0.5fr 1fr 0.5fr;
-                padding-left: 1vw;
-            }
-
-                .logo {
-                    width: 5vw;
-                min-width: 100px;
-                left: 0;
-                padding: 0.5em;
-            }
-
-                #about-icon {
-                    display: flex;
-                justify-content: space-around;
-                align-items: center;
-                margin-right: 0;
-                font-size: 1em;
-                color: var(--text-primary);
-                text-decoration: none;
-            }
-
-                /*-------------------NAVIGATION-------------------*/
-
-                nav {
-                    font - size: 11px;
-                line-height: 16px;
-                letter-spacing: 0.3px;
-                font-weight: 400;
-            }
-
-                ul {
-                    display: flex;
-                flex-flow: row wrap;
-                list-style: none;
-                margin-top: 3vh;
-                /* center the list*/
-                justify-content: center;
-                align-items: center;
-            }
-
-                li {
-                    color: var(--text-primary);
-                background: transparent;
-                font-size: 1.2em;
-                justify-content: center;
-                align-items: center;
-                padding: 1rem 25px;
-            }
-
-                li a {
-                    color: var(--text-primary);
-                text-decoration: none;
-            }
-
-                li :hover {
-                    color: var(--color-secondary);
-            }
-
-                .dropdown {
-                    max - height: 50vh;
-                left: 0;
-                width: 100%;
-                overflow-y: auto;
-                background: var(--color-primary);
-            }
-
-                .dropdown p {
-                    display: block;
-                padding: 10px 25px;
-            }
-
-                .dropdown p::before {
-                    position: absolute;
-                content: "";
-                height: 1px;
-                background-color: var(--color-primary);
-                width: 100%;
-                padding: 0;
-                left: 0;
-                z-index: 10;
-            }
-
-            .dropdown > li {
-                    background: var(--color-primary);
-                padding-left: 36%;
-                font-size: 1em;
-                color: var(--text-secondary);
-            }
-
-            .dropdown > li:first-child {
-                    margin - top: 10px;
-            }
-
-            .dropdown > li:last-child {
-                    margin - bottom: 10px;
-            }
-
-            .dropdown > li:hover {
-                    background: var(--color-primary);
-            }
-
-                li:hover {
-                    background: var(--color-primary);
-                cursor: pointer;
-            }
-
-                ul li ul {
-                    position: absolute;
-                opacity: 0;
-                transition: all 0.3s ease;
-                margin-top: 1rem;
-                transform: translateX(-25px);
-                display: none;
-            }
-
-            ul li:hover > ul,
-                ul li ul:hover {
-                    visibility: visible;
-                opacity: 1;
-                display: block;
-            }
-        </style>
-        `
+    const head = document.querySelector('head');
     
-    // prepend the style to the head
-    styleElement.insertAdjacentHTML('afterbegin', style);
-        
+    // insert stylesheet 'header-component.css' into the header
+    const path = "../header-component.css";
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = path;
+    head.appendChild(link);
+
+    
+
     // set innerHTML
     header.innerHTML = `
      <div class="header-content">
-            <img src="assets/images/logo_round.webp" alt="Driftwood Solar Logo" class="logo">
+            <img src="../assets/images/logo_round.webp" alt="Driftwood Solar Logo" class="logo">
             <nav role="navigation">
                 <ul>
                     <li><a
-                            href="subpages/Selbstbau Photovoltaikanlage.html">Planung</a>
+                            href="Selbstbau Photovoltaikanlage.html">Planung</a>
                         <ul class="dropdown">
                             <li><a
                                     href="https://www.notion.so/valentinfrlch/Planung-Kosten-813126c4f9864b6d963c1f7de4960b45?pvs=4#815d6fdad2d44befa6157c74ec9754d2">Projektablauf</a>
