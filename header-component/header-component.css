@@ -1,6 +1,6 @@
 @font-face {
     font-family: Space-Grotesk;
-    src: url(assets/fonts/space-grotesk.ttf);
+    src: url(../assets/fonts/space-grotesk.ttf);
     --webkit-font-smoothing: antialiased;
     --moz-osx-font-smoothing: grayscale;
 }
