@@ -18,11 +18,10 @@
 
 body {
     background-color: #121212;
-    margin: 0;
+    margin: 2em auto;
 }
 
 article {
-    all: initial !important;
     margin: 0 !important;
 }
 

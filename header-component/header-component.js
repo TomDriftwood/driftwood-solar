@@ -92,10 +92,14 @@ $(document).ready(function () {
         // get the article element and blur it
         const article = document.querySelector('article');
         article.style.filter = 'blur(5px)';
+        article.style.webkitBackdropFilter = 'blur(5px)';
+        article.style.transition = 'filter 0.3s';
     });
     header.addEventListener('mouseout', function (event) {
         // get the article element and blur it
         const article = document.querySelector('article');
         article.style.filter = 'blur(0px)';
+        article.style.webkitBackdropFilter = 'blur(0px)';
+        article.style.transition = 'filter 0.3s';
     });
 });
