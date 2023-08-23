@@ -21,6 +21,11 @@ body {
     margin: 0;
 }
 
+article {
+    all: initial !important;
+    margin: 0 !important;
+}
+
 h1 {
     font-family: Space-Grotesk;
     font-size: 1.5em;

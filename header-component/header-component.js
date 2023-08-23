@@ -5,15 +5,13 @@ $(document).ready(function () {
     // get the div with class='header'
     const header = document.querySelector('.header-component');
     const head = document.querySelector('head');
-    
+
     // insert stylesheet 'header-component.css' into the header
     const path = "../header-component/header-component.css";
     const link = document.createElement('link');
     link.rel = 'stylesheet';
     link.href = path;
     head.appendChild(link);
-
-    
 
     // set innerHTML
     header.innerHTML = `
@@ -86,4 +84,18 @@ $(document).ready(function () {
             </span>
         </div>
         `;
+
+
+
+    // GLOBAL EVENT LISTENERS
+    header.addEventListener('mouseover', function (event) {
+        // get the article element and blur it
+        const article = document.querySelector('article');
+        article.style.filter = 'blur(5px)';
+    });
+    header.addEventListener('mouseout', function (event) {
+        // get the article element and blur it
+        const article = document.querySelector('article');
+        article.style.filter = 'blur(0px)';
+    });
 });
