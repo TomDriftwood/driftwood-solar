@@ -1,0 +1,76 @@
+<!--Create a timeline with cards-->
+
+<html>
+
+<head>
+    <title>Explainer</title>
+    <style>
+        @font-face {
+            font-family: Space-Grotesk;
+            src: url(assets/fonts/space-grotesk.ttf);
+            --webkit-font-smoothing: antialiased;
+            --moz-osx-font-smoothing: grayscale;
+        }
+
+        /* set variables for colors*/
+        :root {
+            --color-primary: #242636;
+            --color-accent: #2e3145;
+            --color-secondary: #e3b753;
+            --text-primary: #ffffff;
+            --text-secondary: #565656;
+        }
+
+        body {
+            background-color: var(--color-primary);
+            font-family: Space-Grotesk;
+            color: var(--text-primary);
+        }
+
+        ul.timeline {
+            list-style-type: none;
+            position: relative;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /*convert li as cards*/
+        ul.timeline li {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            margin-right: 2vw;
+            margin-top: 2vh;
+            position: relative;
+            padding: 20px 0;
+            background: var(--color-accent);
+            border-radius: 10px;
+        }
+
+        /* when hovering over a card, change the background color*/
+        ul.timeline li:hover {
+            background: var(--color-secondary);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="timeline">
+        <li>Grobplanung</li>
+        <li>Dimensionierung der PV-Anlage</li>
+        <li>Anmeldung der PV-Anlage</li>
+        <li>Installationsanzeige & Anschlussgesuch</li>
+        <li>Bestellung der PV-Anlage</li>
+        <li>Installation & Montage</li>
+        <li>AC-Anschluss & Inbetriebnahme</li>
+        <li>Elektrokontrolle</li>
+    </ul>
+</body>
+
+</html>
