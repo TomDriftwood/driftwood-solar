@@ -384,7 +384,7 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .carousel-buttons {
@@ -413,4 +413,81 @@ h3 {
 .type-explainer {
     margin: 0 11vw 5vh 11.7vw;
     font-size: 0.75em;
+}
+
+.planning-section {
+    /* set the background color*/
+    background-color: var(--color-primary);
+    color: var(--text-primary);
+    font-family: Space-Grotesk;
+    font-size: 1.2em;
+    margin: 0 auto;
+    padding: 2vw 2vw;
+}
+
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    /* make everything on the same line*/
+    align-items: center;    
+
+}
+
+/*convert li as cards*/
+ul.timeline li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    position: relative;
+    padding: 20px 0;
+    /* icons and text on the same line*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.6em;
+    color: var(--text-tertiary);
+}
+
+/* when hovering over a card, change the background color*/
+ul.timeline li:hover {
+    cursor: pointer;
+}
+
+/* we want to have a line (progressbar) between the cards*/
+ul.timeline li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -2vw;
+    width: 2vw;
+    height: 3px;
+    background: var(--color-accent);
+    z-index: -1;
+}
+
+/* The first child should not have a line*/
+ul.timeline li:first-child {
+    color: var(--text-primary);
+}
+
+/* active and done styles*/
+ul.timeline li.active {
+    background: var(--color-secondary);
+}
+
+ul.timeline li::before {
+    transition: background 0.3s ease;
+}
+
+#card-go {
+    font-size: 3em;
+    margin: 0;
+    color: var(--text-tertiary);
 }

@@ -54,6 +54,31 @@ $(document).ready(function () {
         }
     });
 
+
+    // Planning Section
+    const cards = document.querySelectorAll("ul.timeline li");
+
+    // add an event listener to each card
+    cards.forEach((card) => {
+        card.addEventListener("click", () => {
+            var nextCards = card.nextElementSibling;
+            while (nextCards) {
+                nextCards.style.color = "var(--text-tertiary)";
+                nextCards = nextCards.nextElementSibling;
+            }
+            var previousCards = card.previousElementSibling;
+            while (previousCards) {
+                previousCards.style.color = "var(--text-primary)";
+                previousCards = previousCards.previousElementSibling;
+            }
+            card.style.color = "var(--text-primary)";
+        });
+    });
+
+
+
+
+
     // Material Design
     var textFields = document.querySelectorAll('.mdc-text-field');
     for (var i = 0, textField; textField = textFields[i]; i++) {
@@ -72,9 +97,9 @@ $(document).ready(function () {
     }
 
     // add ripple effect to all cards
-    var cards = document.querySelectorAll('.mdc-card');
-    for (var i = 0, card; card = cards[i]; i++) {
-        mdc.ripple.MDCRipple.attachTo(card);
+    var MDCcards = document.querySelectorAll('.mdc-card');
+    for (var i = 0, MDCcards; MDCcards = MDCcards[i]; i++) {
+        mdc.ripple.MDCRipple.attachTo(MDCcards);
     }
 
 
