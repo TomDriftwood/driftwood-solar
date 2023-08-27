@@ -42,7 +42,7 @@ $(document).ready(function () {
         var image = $('.carousel-item');
         var paragraph = $('.type-explainer');
         console.log(paragraph.text)
-        var buttons = $('#carousel-button');
+        var buttons = $('.carousel-button');
         for (var i = 0, button; button = buttons[i]; i++) {
             // remove class 'active'
             $(button).removeClass('active');
