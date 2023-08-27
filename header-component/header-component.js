@@ -16,7 +16,7 @@ $(document).ready(function () {
     // set innerHTML
     header.innerHTML = `
      <div class="header-content">
-            <img src="../assets/images/logo_round.webp" alt="Driftwood Solar Logo" class="logo">
+            <a href="../index.html"><img src="../assets/images/logo_round.webp" alt="Driftwood Solar Logo" class="logo"></a>
             <nav role="navigation">
                 <ul>
                     <li><a
