@@ -1,13 +1,5 @@
 // onready
 $(document).ready(function () {
-    // when clicking button 'hero-start-button'
-    $('#main-button').click(function () {
-        // open website (same tab)
-        window.open('https://www.notion.so/valentinfrlch/Selbstbau-Photovoltaikanlage-1ea59febff274d369490fd2e2843ac23', '_self');
-        console.log('button clicked');
-    });
-
-    // add event listener to the buttons with ids 'expand-money' and 'expand-efficency'
     // and 'expand-speed'
     $('#expand-money').click(function () {
         // find closest element with class 'modal-backdrop' and set display to 'block'
@@ -42,6 +34,39 @@ $(document).ready(function () {
         $('#modal-calculator').css('display', 'none');
     });
 
+    // add event listener to classes 'carousel-button'
+    $('.carousel-button').click(function () {
+        // get the id of the button
+        var id = $(this).attr('id');
+        // get image with class 'carousel-image'
+        var image = $('.carousel-item');
+        var paragraph = $('.type-explainer');
+        console.log(paragraph.text)
+        var buttons = $('#carousel-button');
+        for (var i = 0, button; button = buttons[i]; i++) {
+            // remove class 'active'
+            $(button).removeClass('active');
+        }
+        if (id == 'balcony-button') {
+            // set the src of the image to the image of the balcony
+            image.attr('src', '../assets/images/smart_pv_day.png');
+            // set the text of the paragraph to the text of the balcony
+            paragraph.text('Ein Balkonkraftwerk (Solarkraftwerk) ist die kleinste und einfachste Photovoltaikanlage, die Sonnenenergie in elektrische Energie umzuwandeln.Diese Solaranlagen sind als Plug & Play Solar Kit erhältlich, sind einfach zu installieren und dürfen ohne Fachpersonal angeschlossen werden.Die Kosten für diese Solar Kits sind im Bereich CHF 500. - bis 1’000.-.Das Solarmodul wird meist aussen an einem Balkongeländer, auf einem Gartenhaus oder auf einem Hausdach montiert wird.');
+            $(this).addClass('active');
+        } else if (id == 'normal-button') {
+            // set the src of the image to the image of the normal pv
+            image.attr('src', '../assets/images/smart_pv_night.png');
+            // set the text of the paragraph to the text of the normal pv
+            paragraph.text('Eine normale Photovoltaikanlage wird auf dem Dach installiert. Sie ist nicht modular aufgebaut und kann nicht erweitert werden. Die Anlage ist nicht mobil und kann nicht überall aufgestellt werden.');
+            $(this).addClass('active');
+        } else if (id == 'smart-button') {
+            // set the src of the image to the image of the smart pv
+            image.attr('src', '../assets/images/smart_pv_day.png');
+            // set the text of the paragraph to the text of the smart pv
+            paragraph.text('Smart PV ist eine Photovoltaikanlage, die auf dem Balkon installiert wird. Sie ist einfach zu installieren und kann überall aufgestellt werden. Die Anlage ist modular aufgebaut und kann jederzeit erweitert werden.');
+            $(this).addClass('active');
+        }
+    });
 
     // Material Design
     var textFields = document.querySelectorAll('.mdc-text-field');
@@ -118,7 +143,7 @@ $(document).ready(function () {
         var powerPercentage = 100 * perYear / values[2]
         var costSoFar = values[2] * values[4]
         var savingEnergy = values[3] * values[2] / 100
-        var savingMoney = savingEnergy * values[5]
+        var savingMoney = savingEnergy * values[4]
         var energyNetwork = (100 - values[3]) / 100 * values[2]
         var moneyNetwork = energyNetwork * values[4]
         var energyReturn = perYear - savingEnergy
@@ -131,31 +156,23 @@ $(document).ready(function () {
         // set the values to the output fields
         // get the cards with id 'amortsation-card' and 'amortisationszeit-card'
         var amortisationCard = document.getElementById('amortisation-card');
-        var amortisationTimeCard = document.getElementById('amortisationszeit-card');
         var savingsCard = document.getElementById('savings-card');
-        var networkCard = document.getElementById('network-card');
         var einspeisungsCard = document.getElementById('einspeisungs-card');
         var energybillCard = document.getElementById('energybill-card');
         // get their paragraphs
         var amortisationParagraph = amortisationCard.getElementsByTagName('p')[0];
-        var amortisationTimeParagraph = amortisationTimeCard.getElementsByTagName('p')[0];
         var savingsParagraph = savingsCard.getElementsByTagName('p')[0];
-        var networkParagraph = networkCard.getElementsByTagName('p')[0];
         var einspeisungsParagraph = einspeisungsCard.getElementsByTagName('p')[0];
         var energybillParagraph = energybillCard.getElementsByTagName('p')[0];
         // set the values
-        amortisationParagraph.innerHTML = amortization + ' CHF pro Jahr';
-        amortisationTimeParagraph.innerHTML = amortizationTime.toFixed(2) + ' Jahre';
-        savingsParagraph.innerHTML = savingMoney + ' CHF pro Jahr';
-        networkParagraph.innerHTML = moneyNetwork + ' CHF pro Jahr';
-        einspeisungsParagraph.innerHTML = moneyReturn + ' CHF pro Jahr';
+        amortisationParagraph.innerHTML = amortization + ' CHF pro Jahr <br>' + amortizationTime.toFixed(2) + ' Jahre';
+        savingsParagraph.innerHTML = savingMoney + ' CHF pro Jahr<br>' + savingEnergy + ' kWh pro Jahr';
+        einspeisungsParagraph.innerHTML = moneyNetwork + ' CHF pro Jahr (' + energyNetwork + ' kWh)<br>' + moneyReturn + ' CHF pro Jahr (' + energyReturn + ' kWh)';
         energybillParagraph.innerHTML = energyBill + ' CHF pro Jahr';
 
         //show the cards
         amortisationCard.style.display = 'block';
-        amortisationTimeCard.style.display = 'block';
         savingsCard.style.display = 'block';
-        networkCard.style.display = 'block';
         einspeisungsCard.style.display = 'block';
         energybillCard.style.display = 'block';
     }
