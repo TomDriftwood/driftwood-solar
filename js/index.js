@@ -24,7 +24,7 @@ $(document).ready(function () {
         $('#modal-calculator').css('display', 'block');
         // run function fill_inputs
         fill_inputs();
-
+        calculate();
     });
 
 
@@ -61,13 +61,19 @@ $(document).ready(function () {
         mdc.radio.MDCRadio.attachTo(radio);
     }
 
+    // add ripple effect to all cards
+    var cards = document.querySelectorAll('.mdc-card');
+    for (var i = 0, card; card = cards[i]; i++) {
+        mdc.ripple.MDCRipple.attachTo(card);
+    }
+
 
     // add event listener to the button with id 'calculate'
     $('#calculate').click(function () {
-        console.log('calculate clicked')
-        // get all the values from the input fields
-        // the input fields are class 'mdc-text-field__input' and the ids are store in aria-labelledby
-        // find the input fields with class 'mdc-text-field__input' and store them in an array
+        calculate();
+    });
+
+    function calculate() {
         var inputs = document.querySelectorAll('.mdc-text-field__input');
         // create an array to store the values
         var values = [];
@@ -126,28 +132,46 @@ $(document).ready(function () {
         // get the cards with id 'amortsation-card' and 'amortisationszeit-card'
         var amortisationCard = document.getElementById('amortisation-card');
         var amortisationTimeCard = document.getElementById('amortisationszeit-card');
+        var savingsCard = document.getElementById('savings-card');
+        var networkCard = document.getElementById('network-card');
+        var einspeisungsCard = document.getElementById('einspeisungs-card');
+        var energybillCard = document.getElementById('energybill-card');
         // get their paragraphs
         var amortisationParagraph = amortisationCard.getElementsByTagName('p')[0];
         var amortisationTimeParagraph = amortisationTimeCard.getElementsByTagName('p')[0];
+        var savingsParagraph = savingsCard.getElementsByTagName('p')[0];
+        var networkParagraph = networkCard.getElementsByTagName('p')[0];
+        var einspeisungsParagraph = einspeisungsCard.getElementsByTagName('p')[0];
+        var energybillParagraph = energybillCard.getElementsByTagName('p')[0];
         // set the values
-        amortisationParagraph.innerHTML = amortization.toFixed(2) + 'CHF pro Jahr';
+        amortisationParagraph.innerHTML = amortization + ' CHF pro Jahr';
         amortisationTimeParagraph.innerHTML = amortizationTime.toFixed(2) + ' Jahre';
+        savingsParagraph.innerHTML = savingMoney + ' CHF pro Jahr';
+        networkParagraph.innerHTML = moneyNetwork + ' CHF pro Jahr';
+        einspeisungsParagraph.innerHTML = moneyReturn + ' CHF pro Jahr';
+        energybillParagraph.innerHTML = energyBill + ' CHF pro Jahr';
 
         //show the cards
         amortisationCard.style.display = 'block';
         amortisationTimeCard.style.display = 'block';
-    });
+        savingsCard.style.display = 'block';
+        networkCard.style.display = 'block';
+        einspeisungsCard.style.display = 'block';
+        energybillCard.style.display = 'block';
+    }
+
 
     // attach an event listener to radio buttons
     var radios = document.querySelectorAll('.mdc-radio');
     for (var i = 0, radio; radio = radios[i]; i++) {
         radio.addEventListener('click', function () {
             fill_inputs(this.children[0].id);
+            calculate();
         });
     }
 
 
-    function fill_inputs(id='radio-1') {
+    function fill_inputs(id = 'radio-1') {
         var radioId = parseInt(id.slice(-1));
         // get which example is selected from the radio buttons
         var radios = document.querySelectorAll('.mdc-radio');
@@ -171,4 +195,5 @@ $(document).ready(function () {
             input.focus();
         }
     }
+
 });

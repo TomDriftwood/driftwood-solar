@@ -192,8 +192,6 @@ h3 {
     background-color: var(--color-primary);
     border-radius: 25px;
     z-index: 2;
-    /* add a transition effect*/
-    /* zoom and fade in the modal in 0.3 seconds*/
 }
 
 .modal-backdrop {
@@ -237,7 +235,7 @@ h3 {
     position: absolute;
     /* stick to the right*/
     right: 2vh;
-    bottom: 1.8vh;
+    top: 1.8vh;
 
 }
 
@@ -323,6 +321,7 @@ h3 {
     justify-items: left;
     /* space between the cards*/
     column-gap: 2em;
+    row-gap: 1em;
 }
 
 .mdc-card{
@@ -333,6 +332,9 @@ h3 {
     color: var(--text-primary);
     border-radius: 20px;
     padding: 0 1em 0 1em;
+    /* make all the cards the same width and height regardless of the content*/
+    width: 100%;
+    height: 100%;
 }
 
 .mdc-card h5 {
