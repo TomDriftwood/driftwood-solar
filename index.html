@@ -14,9 +14,11 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
-    <link rel="stylesheet" href="../css/index.css">
     <script src="../header-component/header-component.js"></script>
     <script src="../js/index.js"></script>
+    <script src="https://unpkg.com/material-components-web/dist/material-components-web.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web/dist/material-components-web.min.css">
+    <link rel="stylesheet" href="../css/index.css">
 
 <body>
     <!--This is the header-->
@@ -58,19 +60,238 @@
             </div>
         </div>
         <div class="info-reasons">
+
+            <div class="side-by-side">
+                <div class="container-left">
+                    <div class="image-container">
+                        <img src="../assets/images/NZ6_0819.webp" alt="Solar panels close up"
+                            class="info-reasons-image">
+                    </div>
+                </div>
+                <div class="text-container">
+                    <h2 class="info-reasons-title">
+                        Zum Energierechner
+                    </h2>
+                    <h5 class="info-reasons-markup">
+                        Mit dem Energierechner siehst du wie lange es dauert, bis sich deine PV-Anlage amortisiert hat.
+                    </h5>
+                    <span class="material-symbols-rounded expand-icon-span">
+                        <a class="expand-icon" id="expand-calculator">
+                            expand_circle_right
+                        </a>
+                    </span>
+
+                    <div class="modal-backdrop" id="modal-calculator">
+                        <div class="modal-overlay">
+                            <div class="modal-content">
+                                <h1 class="modal-title">
+                                    Energierechner
+                                </h1>
+                                <div class="calculator-container">
+                                    <div class="left-container">
+                                        <form class="calculator">
+                                            <label class="mdc-text-field mdc-text-field--outlined mdc-theme--primary">
+                                                <span class="mdc-notched-outline">
+                                                    <span class="mdc-notched-outline__leading"></span>
+                                                    <span class="mdc-notched-outline__notch">
+                                                        <span class="mdc-floating-label" id="my-label-id">Nennleistung
+                                                            (kWp)</span>
+                                                    </span>
+                                                    <span class="mdc-notched-outline__trailing"></span>
+                                                </span>
+                                                <input type="text" class="mdc-text-field__input" aria-labelledby="kwp">
+                                            </label>
+
+                                            <label class="mdc-text-field mdc-text-field--outlined">
+                                                <span class="mdc-notched-outline">
+                                                    <span class="mdc-notched-outline__leading"></span>
+                                                    <span class="mdc-notched-outline__notch">
+                                                        <span class="mdc-floating-label" id="my-label-id">Kosten</span>
+                                                    </span>
+                                                    <span class="mdc-notched-outline__trailing"></span>
+                                                </span>
+                                                <input type="text" class="mdc-text-field__input" aria-labelledby="cost">
+                                            </label>
+
+                                            <label class="mdc-text-field mdc-text-field--outlined">
+                                                <span class="mdc-notched-outline">
+                                                    <span class="mdc-notched-outline__leading"></span>
+                                                    <span class="mdc-notched-outline__notch">
+                                                        <span class="mdc-floating-label"
+                                                            id="my-label-id">Energieverbrauch
+                                                            (kWh/Jahr)</span>
+                                                    </span>
+                                                    <span class="mdc-notched-outline__trailing"></span>
+                                                </span>
+                                                <input type="text" class="mdc-text-field__input"
+                                                    aria-labelledby="energy">
+                                            </label>
+
+                                            <label class="mdc-text-field mdc-text-field--outlined">
+                                                <span class="mdc-notched-outline">
+                                                    <span class="mdc-notched-outline__leading"></span>
+                                                    <span class="mdc-notched-outline__notch">
+                                                        <span class="mdc-floating-label" id="my-label-id">Eigenverbrauch
+                                                            (%)</span>
+                                                    </span>
+                                                    <span class="mdc-notched-outline__trailing"></span>
+                                                </span>
+                                                <input type="text" class="mdc-text-field__input"
+                                                    aria-labelledby="usage">
+                                            </label>
+
+                                            <label class="mdc-text-field mdc-text-field--outlined">
+                                                <span class="mdc-notched-outline">
+                                                    <span class="mdc-notched-outline__leading"></span>
+                                                    <span class="mdc-notched-outline__notch">
+                                                        <span class="mdc-floating-label"
+                                                            id="my-label-id">Strompreis</span>
+                                                    </span>
+                                                    <span class="mdc-notched-outline__trailing"></span>
+                                                </span>
+                                                <input type="text" class="mdc-text-field__input" aria-labelledby="pay">
+                                            </label>
+
+                                            <label class="mdc-text-field mdc-text-field--outlined">
+                                                <span class="mdc-notched-outline">
+                                                    <span class="mdc-notched-outline__leading"></span>
+                                                    <span class="mdc-notched-outline__notch">
+                                                        <span class="mdc-floating-label"
+                                                            id="my-label-id">Rückvergütung</span>
+                                                    </span>
+                                                    <span class="mdc-notched-outline__trailing"></span>
+                                                </span>
+                                                <input type="text" class="mdc-text-field__input"
+                                                    aria-labelledby="return">
+                                            </label>
+                                        </form>
+                                        <button class="mdc-button mdc-button--raised" id="calculate">
+                                            <span class="mdc-button__label">Berechnen</span>
+                                        </button>
+                                    </div>
+                                    <div class="right-container">
+                                        <h3 class="modal-subtitle">
+                                            Preisbeispiele
+                                        </h3>
+
+                                        <!--add 4 radio buttons from mdc-->
+                                        <div class="mdc-form-field">
+                                            <div class="radio-label">
+                                                <div class="mdc-radio">
+                                                    <input class="mdc-radio__native-control" type="radio" id="radio-1"
+                                                        name="radios" checked>
+                                                    <div class="mdc-radio__background">
+                                                        <div class="mdc-radio__outer-circle"></div>
+                                                        <div class="mdc-radio__inner-circle"></div>
+                                                    </div>
+                                                    <div class="mdc-radio__ripple"></div>
+                                                </div>
+                                                <label for="radio-1">Selbstbau mit Batterie</label>
+                                            </div>
+                                            <div class="radio-label">
+                                                <div class="mdc-radio">
+                                                    <input class="mdc-radio__native-control" type="radio" id="radio-2"
+                                                        name="radios">
+                                                    <div class="mdc-radio__background">
+                                                        <div class="mdc-radio__outer-circle"></div>
+                                                        <div class="mdc-radio__inner-circle"></div>
+                                                    </div>
+                                                    <div class="mdc-radio__ripple"></div>
+                                                </div>
+                                                <label for="radio-2">Selbstbau ohne Batterie</label>
+                                            </div>
+                                            <div class="radio-label">
+                                                <div class="mdc-radio">
+                                                    <input class="mdc-radio__native-control" type="radio" id="radio-3"
+                                                        name="radios">
+                                                    <div class="mdc-radio__background">
+                                                        <div class="mdc-radio__outer-circle"></div>
+                                                        <div class="mdc-radio__inner-circle"></div>
+                                                    </div>
+                                                    <div class="mdc-radio__ripple"></div>
+                                                </div>
+                                                <label for="radio-3">Solarteur mit Batterie</label>
+                                            </div>
+                                            <div class="radio-label">
+                                                <div class="mdc-radio">
+                                                    <input class="mdc-radio__native-control" type="radio" id="radio-4"
+                                                        name="radios">
+                                                    <div class="mdc-radio__background">
+                                                        <div class="mdc-radio__outer-circle"></div>
+                                                        <div class="mdc-radio__inner-circle"></div>
+                                                    </div>
+                                                    <div class="mdc-radio__ripple"></div>
+                                                </div>
+                                                <label for="radio-4">Solarteur ohne Batterie</label>
+                                            </div>
+
+
+
+
+                                        </div>
+                                    </div>
+
+                                    <span class="material-symbols-rounded close-icon-span">
+                                        <a class="close-icon" id="close-modal-calculator">
+                                            cancel
+                                        </a>
+                                    </span>
+                                </div>
+
+                                <div class="result-cards">
+                                    <!--mdc card with heading and a paragraph-->
+                                    <div class="mdc-card" id="amortisation-card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Amortisation</h5>
+                                            <p class="card-text" id="result-text"></p>
+                                            <p class="card-text">Amortisation ist der Prozess, bei dem die
+                                                Kosten
+                                                für eine Solaranlage über einen bestimmten Zeitraum verteilt
+                                                werden.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="mdc-card" id="amortisationszeit-card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Amortisationszeit</h5>
+                                            <p class="card-text" id="result-text"></p>
+                                            <p class="card-text">Die Amortisationszeit einer Solaranlage
+                                                gibt
+                                                an,
+                                                wie lange es dauert, bis sich die Investition in die Anlage
+                                                durch
+                                                die
+                                                Einsparungen amortisiert hat.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
             <div class="side-by-side">
                 <div class="text-container">
                     <h2 class="info-reasons-title">
                         Kostengünstig
                     </h2>
                     <h5 class="info-reasons-markup">
-                        Für den Selbstbau einer 10 kWp Photovoltaikanlage in der Schweiz belaufen sich die Kosten nach
+                        Für den Selbstbau einer 10 kWp Photovoltaikanlage in der Schweiz belaufen sich die
+                        Kosten
+                        nach
                         Abzug
                         von
-                        Bundesförderbeiträgen auf rund CHF 18'000. Der Energieertrag beträgt etwa 10 kWh pro Jahr und
+                        Bundesförderbeiträgen auf rund CHF 18'000. Der Energieertrag beträgt etwa 10 kWh pro
+                        Jahr
+                        und
                         deckt
                         den
-                        Jahresstrombedarf eines EFH. Die Amortisationszeit einer selbstgebauten PV-Anlage liegt unter 10
+                        Jahresstrombedarf eines EFH. Die Amortisationszeit einer selbstgebauten PV-Anlage
+                        liegt
+                        unter 10
                         Jahren.
                     </h5>
                     <span class="material-symbols-rounded expand-icon-span">
@@ -86,33 +307,50 @@
                                     Kostengünstig
                                 </h1>
                                 <p class="modal-text">
-                                    Der Selbstbau einer 10 kWp Photovoltaikanlage beläuft sich nach Abzug der
+                                    Der Selbstbau einer 10 kWp Photovoltaikanlage beläuft sich nach Abzug
+                                    der
                                     Förderbeiträge
                                     des Bundes (Einmalvergütung)
-                                    auf rund CHF 18’000 (siehe Kostenbeispiel unten). Nicht eingerechnet sind
+                                    auf rund CHF 18’000 (siehe Kostenbeispiel unten). Nicht eingerechnet
+                                    sind
                                     Steuervergünstigungen. Diese lassen sich bei
-                                    der Steuerrechnung nach Abzug des Freibetrags vom Einkommen abziehen. Der
+                                    der Steuerrechnung nach Abzug des Freibetrags vom Einkommen abziehen.
+                                    Der
                                     Energieertrag
                                     einer 10 kWp PV-Anlage beträgt
-                                    in der Schweiz rund 10 kWh elektrischen Strom pro Jahr und deckt damit meist den
+                                    in der Schweiz rund 10 kWh elektrischen Strom pro Jahr und deckt damit
+                                    meist
+                                    den
                                     Jahres-Strombedarf eines EFH (5 bis 10
-                                    kWh). Die Amortisationszeit einer selbstgebauten PV-Anlage liegt damit unter 10
+                                    kWh). Die Amortisationszeit einer selbstgebauten PV-Anlage liegt damit
+                                    unter
+                                    10
                                     Jahren.
 
-                                    Die Preise von Photovoltaikanlagen, den Solarteure in der Schweiz verlangen, sind
+                                    Die Preise von Photovoltaikanlagen, den Solarteure in der Schweiz
+                                    verlangen,
+                                    sind
                                     seit
                                     der Corona-Krise und den damit
-                                    verbundenen Lieferengpässen (Chip-Krise) und der Knappheit von Fachpersonal
+                                    verbundenen Lieferengpässen (Chip-Krise) und der Knappheit von
+                                    Fachpersonal
                                     erheblich
                                     gestiegen. Oft wird bei den
-                                    Offerten der Solarteure deshalb die Amortisationszeit nicht einmal mehr aufgeführt,
+                                    Offerten der Solarteure deshalb die Amortisationszeit nicht einmal mehr
+                                    aufgeführt,
                                     da
                                     sie weit über 20 Jahren liegt.
-                                    Die in der Tabelle unten aufgeführte PV-Anlage kostet bei einem Solarteur rund CHF
+                                    Die in der Tabelle unten aufgeführte PV-Anlage kostet bei einem
+                                    Solarteur
+                                    rund
+                                    CHF
                                     45’000 (Stand 2023). Das
-                                    Sparpotential beträgt CHF 27’000, die durch Eigenleistungen selbst erbracht werden
+                                    Sparpotential beträgt CHF 27’000, die durch Eigenleistungen selbst
+                                    erbracht
+                                    werden
                                     können. Für den Selbstbau zahlt man
-                                    somit weniger als die Hälfte des Preises einer durch eine Solarfirma erstellen
+                                    somit weniger als die Hälfte des Preises einer durch eine Solarfirma
+                                    erstellen
                                     PV-Anlage.
                                 </p>
                                 <span class="material-symbols-rounded close-icon-span">
@@ -142,7 +380,8 @@
                         Effizient
                     </h2>
                     <h5 class="info-reasons-markup">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget
+                        ultricies
                     </h5>
                     <span class="material-symbols-rounded expand-icon-span">
                         <a class="expand-icon" id="expand-efficiency">
@@ -157,7 +396,9 @@
                                     Effizient
                                 </h1>
                                 <p class="modal-text">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod,
+                                    nisl
+                                    eget
                                 </p>
                                 <span class="material-symbols-rounded close-icon-span">
                                     <a class="close-icon" id="close-modal-efficiency">
@@ -177,12 +418,16 @@
                         Schnelle Umsetzung
                     </h2>
                     <h5 class="info-reasons-markup">
-                        Die Nachfrage nach Photovoltaikanlagen ist aufgrund von Lieferengpässen massiv gestiegen.
+                        Die Nachfrage nach Photovoltaikanlagen ist aufgrund von Lieferengpässen massiv
+                        gestiegen.
                         Europäische Produkte haben
-                        lange Lieferzeiten, während chinesische Produkte besser verfügbar und günstiger sind.
+                        lange Lieferzeiten, während chinesische Produkte besser verfügbar und günstiger
+                        sind.
                         Wartezeiten
                         von bis zu einem Jahr
-                        sind keine Seltenheit, aber ein PV-Projekt im Selbstbau kann schneller realisiert werden, wenn
+                        sind keine Seltenheit, aber ein PV-Projekt im Selbstbau kann schneller realisiert
+                        werden,
+                        wenn
                         man
                         auf Komponenten mit
                         kurzen Lieferfristen zurückgreift.
@@ -200,12 +445,15 @@
                                     Schnelle Umsetzung
                                 </h1>
                                 <p class="modal-text">
-                                    Die Nachfrage nach Photovoltaikanlagen ist seit dem Beginn des Krieges in der
+                                    Die Nachfrage nach Photovoltaikanlagen ist seit dem Beginn des Krieges
+                                    in
+                                    der
                                     Ukraine
                                     und
                                     den
                                     damit verbundenen Gas- und
-                                    Erdöl Lieferengpässen massiv angestiegen. In Europa hergestellte PV-Module,
+                                    Erdöl Lieferengpässen massiv angestiegen. In Europa hergestellte
+                                    PV-Module,
                                     Wechselrichter
                                     und
                                     Batterien sind nur mit
@@ -213,21 +461,26 @@
                                     chinesischen
                                     Produkten
                                     aus: China dominiert den
-                                    weltweiten Solarmarkt und die Artikel sind meist besser verfügbar und auch günstiger
+                                    weltweiten Solarmarkt und die Artikel sind meist besser verfügbar und
+                                    auch
+                                    günstiger
                                     als
                                     vergleichbare europäische oder
                                     amerikanische Produkte.
 
-                                    Infolge der hohen Nachfrage nach PV-Anlagen sind die Bestellbücher der Solarteure
+                                    Infolge der hohen Nachfrage nach PV-Anlagen sind die Bestellbücher der
+                                    Solarteure
                                     und
                                     der
                                     auf
                                     Solaranlagen
-                                    spezialisierten Elektriker voll. Wartezeiten von bis zu einem Jahr sind deshalb
+                                    spezialisierten Elektriker voll. Wartezeiten von bis zu einem Jahr sind
+                                    deshalb
                                     keine
                                     Seltenheit.
 
-                                    Wenn man bei der Komponentenauswahl flexibel ist und man auf Produkte zurückgreift,
+                                    Wenn man bei der Komponentenauswahl flexibel ist und man auf Produkte
+                                    zurückgreift,
                                     die
                                     kurze
                                     Lieferfristen haben, lässt

@@ -13,7 +13,7 @@
     --color-accent: #2e3145;
     --color-secondary: #e3b753;
     --text-primary: #ffffff;
-    --text-secondary: #565656;
+    --text-secondary: #dcdcdc;
 }
 
 body {
@@ -245,4 +245,105 @@ h3 {
     font-variation-settings: 'FILL' 1;
     /* fade as transition*/
     transition: font-variation-settings 0.3s;
+}
+
+/* ENERGY CALCULATOR */
+
+.calculator-container{
+    /* this is a 60 40 grid*/
+    display: grid;
+    grid-template-columns: 60% 40%;
+
+}
+
+.mdc-text-field {
+    color: var(--text-primary) !important;
+    caret-color: var(--text-primary) !important;
+    width: 90%;
+    margin: 0 1em 1em 0
+}
+
+.mdc-text-field__input {
+    color: var(--text-primary) !important;
+    caret-color: var(--text-primary) !important;
+}
+
+.mdc-floating-label {
+    color: lightgrey !important;
+}
+
+/* set the outline color*/
+.mdc-notched-outline__leading,
+.mdc-notched-outline__notch,
+.mdc-notched-outline__trailing {
+    border-color: var(--text-primary) !important;
+}
+
+/* set the border color for invalid inputs*/
+.mdc-text-field--invalid .mdc-floating-label,
+.mdc-text-field--invalid .mdc-notched-outline__leading,
+.mdc-text-field--invalid .mdc-notched-outline__notch,
+.mdc-text-field--invalid .mdc-notched-outline__trailing {
+    border-color: red !important;
+}
+
+.mdc-button {
+    color: var(--text-primary) !important;
+    background-color: var(--color-secondary) !important;
+}
+
+.mdc-form-field {
+    /* make all the radio buttons below each other*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;   
+}
+
+.radio-label {
+    color: var(--text-primary) !important;
+    /* make this a grid with 2 columns*/
+    display: grid;
+    grid-template-columns: .1fr 9fr;
+    /* space between the radio button and the label*/
+    column-gap: 0.5em;
+    /* vertically align the label center*/
+    align-items: center;
+}
+
+.mdc-radio {
+    /* make the button color --primary*/
+    --mdc-theme-secondary: var(--color-secondary) !important;
+}
+
+.result-cards{
+    /* grid with 2 columns*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid is left aligned*/
+    justify-items: left;
+    /* space between the cards*/
+    column-gap: 2em;
+}
+
+.mdc-card{
+    /* initially the cards are hidden*/
+    display: none;
+    margin-top: 1.5em;
+    background-color: var(--color-accent);
+    color: var(--text-primary);
+    border-radius: 20px;
+    padding: 0 1em 0 1em;
+}
+
+.mdc-card h5 {
+    margin-bottom: 0.2em;
+}
+
+.mdc-card p {
+    margin-top: 0.4em;
+    font-size: 0.8em;
+}
+
+#result-text {
+    font-weight: 600;
 }
