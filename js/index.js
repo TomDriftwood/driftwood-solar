@@ -155,11 +155,11 @@ $(document).ready(function () {
         if (radioId == 1) {
             var example = [10, 18000, 10000, 75, 0.2, 0.1];
         } else if (radioId == 2) {
-            var example = [10, 9000, 10000, 75, 0.2, 0.1];
+            var example = [10, 12000, 10000, 40, 0.2, 0.1];
         } else if (radioId == 3) {
-            var example = [10, 32000, 10000, 75, 0.2, 0.1];
+            var example = [10, 45000, 10000, 75, 0.2, 0.1];
         } else if (radioId == 4) {
-            var example = [10, 25000, 10000, 75, 0.2, 0.1];
+            var example = [10, 39000, 10000, 40, 0.2, 0.1];
         }
 
         var inputs = document.querySelectorAll('.mdc-text-field__input');
