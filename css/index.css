@@ -288,7 +288,8 @@ h3 {
 
 .mdc-button {
     color: var(--text-primary) !important;
-    background-color: var(--color-secondary) !important;
+    border-color: var(--color-secondary) !important;
+    --mdc-theme-primary: var(--color-secondary) !important;
 }
 
 .mdc-form-field {
