@@ -174,3 +174,7 @@ body {
 .page  {
     margin: 10em 8em 8em 4em;
 }
+
+article {
+    margin: 10em !important;
+}

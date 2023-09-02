@@ -20,7 +20,7 @@ $(document).ready(function () {
             <nav role="navigation">
                 <ul>
                     <li><a
-                            href="../Selbstbau Photovoltaikanlage.html">Planung</a>
+                            href="../Planung.html">Planung</a>
                         <ul class="dropdown">
                             <li><a
                                     href="https://www.notion.so/valentinfrlch/Planung-Kosten-813126c4f9864b6d963c1f7de4960b45?pvs=4#815d6fdad2d44befa6157c74ec9754d2">Projektablauf</a>

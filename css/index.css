@@ -527,11 +527,12 @@ ul.timeline li::before {
 }
 
 .timeline-explainer {
-    margin: 0 11vw 5vh 11.7vw;
+    margin: 0 11vw 1em 11.7vw;
     font-size: 0.75em;
-    min-height: 10em;   
+    min-height: 8em;   
 }
 
 #timeline-button {
-    
+    margin: 0 11vw 5vh 11.7vw;
+    font-size: 0.55em;
 }

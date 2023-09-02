@@ -111,6 +111,9 @@ $(document).ready(function () {
         mdc.ripple.MDCRipple.attachTo(MDCcards);
     }
 
+    // Set the onclick function for timeline-button
+    setTitle('Vorbereitung')
+
 
     // add event listener to the button with id 'calculate'
     $('#calculate').click(function () {
@@ -251,6 +254,10 @@ $(document).ready(function () {
         }
 
         paragraph.innerHTML = text;
+        // get the button with id 'timeline-button' and set the onclick script
+        var button = document.getElementById('timeline-button');
+        link = '../Planung.html#' + cardTitle;
+        button.setAttribute('onclick', 'location.href="' + link + '"');
         // animate the paragraph with keyframes
         // text should fade out and fade in and slide up when changing
         paragraph.style.animation = 'fadeout 0.5s ease-in-out forwards';
