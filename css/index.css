@@ -246,6 +246,39 @@ h3 {
     transition: font-variation-settings 0.3s;
 }
 
+.simple-table {
+    margin-top: 1em;
+    font-size: 0.875rem;
+    empty-cells: show;
+}
+
+.simple-table td:last-child {
+    text-align: right;
+}
+
+/* make the padding of the table cells larger in height*/
+.simple-table td,
+.simple-table th {
+    padding: 0.75em 1em;
+}
+
+table {
+    border: 1px solid var(--text-primary);
+}
+
+table,
+th,
+td {
+    border: 1px solid var(--text-primary);
+    border-collapse: collapse;
+}
+
+
+
+
+
+
+
 /* ENERGY CALCULATOR */
 
 .calculator-container {
@@ -491,4 +524,14 @@ ul.timeline li::before {
     font-size: 3em;
     margin: 0;
     color: var(--text-tertiary);
+}
+
+.timeline-explainer {
+    margin: 0 11vw 5vh 11.7vw;
+    font-size: 0.75em;
+    min-height: 10em;   
+}
+
+#timeline-button {
+    
 }

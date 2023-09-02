@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    $('#expand-motivation').click(function () {
+        $('#modal-motivation').css('display', 'block');
+    });
     $('#expand-money').click(function () {
         $('#modal-money').css('display', 'block');
     });
@@ -16,6 +19,9 @@ $(document).ready(function () {
 
 
     // add event listener to the buttons with id 'close-modal'
+    $('#close-modal-motivation').click(function () {
+        $('#modal-motivation').css('display', 'none');
+    });
     $('#close-modal-speed').click(function () {
         $('#modal-speed').css('display', 'none');
     });
@@ -28,6 +34,7 @@ $(document).ready(function () {
     $('#close-modal-calculator').click(function () {
         $('#modal-calculator').css('display', 'none');
     });
+    
 
     // add event listener to classes 'carousel-button'
     $('.carousel-button').click(function () {
@@ -71,6 +78,8 @@ $(document).ready(function () {
                 previousCards.style.color = "var(--text-primary)";
                 previousCards = previousCards.previousElementSibling;
             }
+            cardTitle = card.childNodes[0].textContent
+            setTitle(cardTitle);
             card.style.color = "var(--text-primary)";
         });
     });
@@ -209,4 +218,44 @@ $(document).ready(function () {
         }
     }
 
+    function setTitle(cardTitle) {
+        // get the paragraph element with class 'type-explainer'
+        var paragraph = document.getElementsByClassName('timeline-explainer')[0];
+        // set the text acordingly
+        if (cardTitle == 'Vorbereitung') {
+            text = 'Am Anfang des PV-Projekt sollte man sich überlegen auf welchen Dächern (Schrägdach, Flachdach, Garage, Gartenhaus) man Solarmodule montieren kann, ob genügend Platz vorhanden ist und ob die Ausrichtung der Dächer für die Solarstromerzeigung geeignet sind: Den höchsten Jahresertrag erzielt man auf Dächern mit Südausrichtung und einer Neigung von ca. 30 Grad. Aber auch eine Ost-West Ausrichtung kann durchaus Sinn machen, denn damit erzielt man zwar einen etwas niedrigeren Jahresertrag, dafür erzeugt man in den Morgen- und Abendstunden mehr Energie als mit einer nur nach Süden ausgerichteten Anlage. Insbesondere für PV-Anlagen ohne Batterie ist deshalb eine Ost-West Ausrichtung attraktiv, da sich der Stromertrag über einen längeren Zeitraum pro Tag erstreckt. Die Solarerzeugung auf Dächern mit Nordausrichtung und einer Neigung von über 15% macht wirtschaftlich keinen Sinn, da insbesondere im Winter bei tierstehender Sonne der Ertrag niedrig ist. Neben der verfügbaren Dachfläche muss man die Statik prüfen und beim Architekten oder Statiker abgeklärt, ob das Dach die für die zusätzliche Last (normalerweise 20-45 kg/m2) der PV-Anlage ausgelegt ist.';
+        }
+        if (cardTitle == 'Elektriker suchen') {
+            text = 'Es lohnt sich, frühzeitig einen auf Solaranlagen spezialisierten Elektriker zu suchen. Die Suche erweist sich nicht immer als einfach, denn nicht alle Elektriker können PV-Anlagen in Betrieb nehmen und sind bereit, den AC-Anschluss bei selbst erstellten PV-Anlagen zu machen. Am besten bespricht man mit dem Elektriker sein PV-Projekt und spricht mit ihm ab, welche Arbeiten man selber ausführen kann und welche vom Elektriker übernommen werden.';
+        }
+        if (cardTitle == 'Planung') {
+            text = 'Nachdem das PV-Projekt mit dem Elektriker abgesprochen ist, kann man mit der Detailplanung beginnen. Man muss die Leistung der PV-Anlage festlegen sowie geeignete Wechselrichter, Batterien, Smart Meter und eine Wallbox auswählen. Auch über die Verschattung der Solarmodule sollte man sich Gedanken machen: hat man z.B. einen Kamin oder eine Gaube auf dem Dach oder grosse Bäume in der Umgebung, die einen wandernden Schatten im Tagesverlauf auf die Solarmodule werfen, kann die Ausstattung der Module mit Optimierern sinnvoll sein. Diese haben zudem den Vorteil, dass dann die Leistung aller mit einem Optimierer ausgestatteten Solarmodule einzeln überwacht werden kann und damit die Fehlersuche nach defekten Solarmodulen einfach ist.';
+        }
+        if (cardTitle == 'Anmeldung') {
+            text = 'Seit dem Jahr 2023 müssen im Kanton Zürich Solaranlagen lediglich der zuständigen Behörde (Gemeinde) gemeldet werden, eine Baubewilligung ist nicht mehr nötig. Am besten bespricht man mit der Baubehörde der Gemeinde, welche Unterlagen beim Meldeverfahren eingereicht werden müssen. Normalerweise sind dies ein Katasterblatt mit der Aufsicht auf die Solarmodule, das Modulblatt der Solarpanels und eine Skizze für die Gebäudeversicherung & Feuerwehr mit dem genauen Standort der elektrischen Geräte der PV-Anlage befinden.';
+        }
+        if (cardTitle == 'Bewilligung') {
+            text = 'Der Elektriker reicht die Installationsanzeige (IA) für die PV-Anlage und das technische Anschlussgesuch (TAG) beim Netzbetreiber ein. Falls zusätzlich eine Wallbox installiert werden soll, braucht es auch dafür eine Installationsanzeige (IA).';
+        }
+        if (cardTitle == 'Bestellung') {
+            text = 'Der Erwerb von Einzelkomponenten für eine PV-Anlage erweist sich in der Schweiz als nicht so einfach, denn die Grossverteiler (z.B. Solarmarkt) verkaufen nur an Firmen und nicht an Privatpersonen. Aber wer sucht wird fündig: die Solarmodule, die elektrischen Geräte und die Unterkonstruktion können von kleineren, innovativen Firmen in der Schweiz zu teils fairen Preisen erworben werden. Eine weitere Möglichkeit bietet der Erwerb im Ausland: in Deutschland ist der Selbstbau von PV-Anlagen weit verbreitet und deshalb die Angebote für Privatpersonen wesentlich umfangreicher und oft auch günstiger als in der Schweiz. Wer sich die Waren an eine Lieferadresse an der Grenze liefern lässt und diese dann selber in die Schweiz importiert, kann  günstig alle Komponenten einer PV-Anlage erwerben.';
+        }
+        if (cardTitle == 'Installation') {
+            text = 'Die Solarmodule werden meist auf einer Unterkonstruktion aus Aluminium montiert. Bei Schrägdächern werden Dachhaken auf die Holzunterkonstruktion der Dachziegel geschraubt und auf Aluminiumschinen montiert. Detaillierte Anleitungen dazu findet man z.B. auf YouTube. Bei Flachdächern werden die Module meist im 15 Grad Winkel leicht aufgestellt und auf einer Alu-Unterkonstruktion montiert. Diese wird mittels Balaststeinen (Betonplatten) beschwert, ein Verschrauben mit dem Dach ist nicht nötig. Die Aluminiumunterkonstruktion muss geerdet werden und falls vorhanden an eine Blitzschutzanlage angeschlossen werden. Die Solarmodule dürfen im Selbstbau montiert werden.Erlaubt ist auch das Stecken von Modulverbindungen mit vorkonfektionierten Kabeln.Der Wechselrichter und die Batterie darf vormontiert werden.Alle AC - seitigen Elektroarbeiten müssen zwingend von einem zertifizierten Elektriker ausgeführt werden.';
+        }
+        if (cardTitle == 'Elektroarbeiten') {
+            text = 'Der Elektriker führt alle Arbeiten am Sicherungskasten durch. Er schliesst den Wechselrichter sowie der Wallbox AC-seitig an und baut den Smart Meter und die notwendigen LS-Schalter ein. Danach führt der Elektriker die Erstprüfung der PV-Anlage durch und erstellt ein Mess- und Prüfprotokoll. Am Schluss nimmt er die PV-Anlage in Betrieb, so dass der erste selber produzierte Solarstrom geerntet werden kann.';
+        }
+        if (cardTitle == 'Kontrolle') {
+            text = 'Innerhalb von 6 Monaten nach der Inbetriebnahme der PV-Anlage muss ein unabhängiges Kontrollorgan oder eine akkreditierte Inspektion die PV-Anlage kontrollieren, den Sicherheitsnachweis erstellen und dem Netzbetreiber einreichen.';
+        }
+
+        paragraph.innerHTML = text;
+        // animate the paragraph with keyframes
+        // text should fade out and fade in and slide up when changing
+        paragraph.style.animation = 'fadeout 0.5s ease-in-out forwards';
+        setTimeout(function () {
+            paragraph.style.animation = 'fadein 0.5s ease-in-out forwards';
+        }, 500);
+    }
 });
