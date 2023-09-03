@@ -5,7 +5,7 @@
 [Live Site](https://tomdriftwood.github.io/driftwood-solar)
 
 
-## Exporting Notion
+## Notion Exportieren
 ### Notion als HTML herunterladen
 <img width="30" alt="image" src="https://github.com/TomDriftwood/driftwood-solar/assets/85313672/80172c61-6811-4c1e-87bc-8f7f9da0120a"> → <img width="178" alt="image" src="https://github.com/TomDriftwood/driftwood-solar/assets/85313672/d262d649-bddd-434f-918a-de89d4595656">
 
