@@ -16,7 +16,7 @@
     --text-secondary: #c4c4c4 !important;
     --text-tertiary: #8e8e8e;
 
-    --font-primary: Space-Grotesk;
+    --font-primary: Poppins;
     --font-secondary: Poppins;
 }
 
@@ -30,7 +30,7 @@ article {
 }
 
 h1 {
-    font-family: Space-Grotesk;
+    font-family: var(--font-primary);
     font-size: 1.5em;
     line-height: 1.2em;
     letter-spacing: -2%;
@@ -38,7 +38,7 @@ h1 {
 }
 
 h2 {
-    font-family: Space-Grotesk;
+    font-family: var(--font-primary);
     font-size: 1em;
     line-height: 1.2em;
     letter-spacing: -2%;
@@ -46,7 +46,7 @@ h2 {
 }
 
 h3 {
-    font-family: Space-Grotesk;
+    font-family: var(--font-primary);
     font-size: 1em;
     line-height: 1.2em;
     letter-spacing: -2%;
@@ -80,7 +80,7 @@ h3 {
     left: 50%;
     transform: translate(-50%, -50%);
     color: var(--text-primary);
-    font-family: Space-Grotesk;
+    font-family: var(--font-primary);
     text-align: center;
     font-size: 3em;
 }
@@ -92,7 +92,7 @@ h3 {
     left: 50%;
     transform: translate(-50%, 250%);
     color: var(--text-primary);
-    font-family: Space-Grotesk;
+    font-family: var(--font-primary);
     text-align: center;
     font-size: 1.6em;
 }
@@ -130,7 +130,7 @@ h3 {
 }
 
 .hero-info-item {
-    font-family: Space-Grotesk;
+    font-family: var(--font-primary);
     color: var(--text-primary);
 }
 
@@ -144,7 +144,7 @@ h3 {
     /* set the background color*/
     background-color: var(--color-primary);
     color: var(--text-primary);
-    font-family: Space-Grotesk;
+    font-family: var(--font-primary);
     font-size: 1.2em;
     /* padding: 5vh 7vw;*/
 }
@@ -326,6 +326,7 @@ td {
 
 .mdc-button {
     color: var(--text-primary) !important;
+    font-family: var(--font-secondary);
     border-color: var(--color-secondary) !important;
     --mdc-theme-primary: var(--color-secondary) !important;
 }
@@ -395,7 +396,7 @@ td {
     /* set the background color*/
     background-color: var(--color-primary);
     color: var(--text-primary);
-    font-family: Space-Grotesk;
+    font-family: var(--font-primary);
     font-size: 1.2em;
     margin: 0 auto;
     padding: 2vw 2vw;
@@ -433,7 +434,7 @@ td {
 }
 
 .carousel-button {
-    font-weight: 450;
+    font-weight: 600;
     font-size: 0.7em;
     padding-top: 0.7em;
     width: 70%;
@@ -457,7 +458,7 @@ td {
     /* set the background color*/
     background-color: var(--color-accent);
     color: var(--text-primary);
-    font-family: Space-Grotesk;
+    font-family: var(--font-primary);
     font-size: 1.2em;
     margin: 0 auto;
     padding: 2vw 2vw;
@@ -490,12 +491,15 @@ ul.timeline li {
     flex-direction: row;
     align-items: center;
     font-size: 0.6em;
+    font-weight: 600;
     color: var(--text-tertiary);
 }
 
 /* when hovering over a card, change the background color*/
 ul.timeline li:hover {
     cursor: pointer;
+    background-color: var(--color-accent);
+    color: var(--text-primary);
 }
 
 /* we want to have a line (progressbar) between the cards*/
@@ -540,6 +544,8 @@ ul.timeline li::before {
 #timeline-button {
     margin: 0 11vw 5vh 11.7vw;
     font-size: 0.55em;
+    font-family: var(--font-secondary);
+    font-weight: 600;
 }
 
 
@@ -548,7 +554,7 @@ ul.timeline li::before {
     /* set the background color*/
     background-color: var(--color-primary);
     color: var(--text-primary);
-    font-family: Space-Grotesk;
+    font-family: var(--font-primary);
     font-size: 1.2em;
     margin: 0 auto;
     padding: 2vw 2vw;
@@ -567,16 +573,13 @@ ul.timeline li::before {
 }
 
 .card-carousel-container {
-    /* this is a grid with 3 columns*/
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    /* space between the cards*/
     column-gap: 1em;
-    /* space between the cards and the arrows*/
     margin: 0 1em 0 1em;
-    /* center the cards*/
     justify-items: center;
 }
+
 
 #carousel-nav-button {
     height: 5em;
@@ -597,5 +600,14 @@ ul.timeline li::before {
 }
 
 .mdc-card_content {
-    padding: 0.5em 1em 1em 1em;
+    padding: 0.5em 1em 0em 1em;
+    font-family: var(--font-secondary);
+    /* set max height, otherwise hide overflow*/
+    max-height: 12em;
+    overflow: hidden;
+}
+
+.mdc-card_content p{
+    font-size: 0.7em;
+    line-height: 1.5em;
 }

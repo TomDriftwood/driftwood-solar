@@ -115,6 +115,17 @@ $(document).ready(function () {
     setTitle('Vorbereitung')
 
 
+    // add event listener to cards with id 'carousel-nav-card'
+    var carouselNavCards = document.querySelectorAll('#carousel-nav-card');
+    for (var i = 0, carouselNavCard; carouselNavCard = carouselNavCards[i]; i++) {
+        carouselNavCard.addEventListener('click', function () {
+            var href = this.getAttribute('href');
+            // open a new window with the href
+            window.open(href, '_blank');
+        });
+    }
+
+
     // add event listener to the button with id 'calculate'
     $('#calculate').click(function () {
         calculate();
