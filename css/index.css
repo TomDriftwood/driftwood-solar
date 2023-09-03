@@ -606,9 +606,19 @@ ul.timeline li::before {
     /* set max height, otherwise hide overflow*/
     max-height: 12em;
     overflow: hidden;
+
+    .card-subtitle {
+        font-size: 0.6em;
+        font-weight: 600;
+        color: var(--text-secondary);
+        margin-top: 0.5em;
+    }
+    .card-title {
+        margin-top: 0.5em;
+    }
 }
 
-.mdc-card_content p{
+.mdc-card_content p {
     font-size: 0.7em;
     line-height: 1.5em;
 }
