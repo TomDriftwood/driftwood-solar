@@ -287,6 +287,36 @@ td {
 
 /* ENERGY CALCULATOR */
 
+#energy-banner-card {
+    /* set the background color to 70% opacity of the secondary color*/
+    background-color: rgba(227, 183, 83, 0.6);
+    height: 10%;
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    .card-body {
+        display: grid;
+        grid-template-columns: 10% 80% 10%;
+        align-items: center;
+        width: 100%;
+
+        .card-text {
+            margin: 0;
+        }
+    }
+
+    .card-body :first-child {
+        text-align: center;
+    }
+
+    .card-body :last-child {
+        text-align: center;
+    }
+}
+
 .calculator-container {
     /* this is a 60 40 grid*/
     display: grid;
@@ -613,6 +643,7 @@ ul.timeline li::before {
         color: var(--text-secondary);
         margin-top: 0.5em;
     }
+
     .card-title {
         margin-top: 0.5em;
     }

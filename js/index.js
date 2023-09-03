@@ -125,6 +125,13 @@ $(document).ready(function () {
         });
     }
 
+    // add event listener to banner with id 'energy-banner-card'
+    var energyBannerCard = document.getElementById('energy-banner-card');
+    energyBannerCard.addEventListener('click', function () {
+        var href = 'https://www.ekz.ch/de/privatkunden/strom/tarife/stromtarife.html#tarife2024';
+        // open a new window with the href
+        window.open(href, '_blank');
+    });
 
     // add event listener to the button with id 'calculate'
     $('#calculate').click(function () {
@@ -211,15 +218,15 @@ $(document).ready(function () {
 
     function fill_inputs(id = 'radio-1') {
         var radioId = parseInt(id.slice(-1));
-        var example = [10, 18000, 10000, 75, 0.2, 0.1];
+        var example = [10, 18000, 10000, 75, 0.328, 0.188];
         if (radioId == 1) {
-            var example = [10, 18000, 10000, 75, 0.2, 0.1];
+            var example = [10, 18000, 10000, 75, 0.328, 0.188];
         } else if (radioId == 2) {
-            var example = [10, 12000, 10000, 40, 0.2, 0.1];
+            var example = [10, 12000, 10000, 40, 0.328, 0.188];
         } else if (radioId == 3) {
-            var example = [10, 45000, 10000, 75, 0.2, 0.1];
+            var example = [10, 45000, 10000, 75, 0.328, 0.188];
         } else if (radioId == 4) {
-            var example = [10, 39000, 10000, 40, 0.2, 0.1];
+            var example = [10, 39000, 10000, 40, 0.328, 0.188];
         }
 
         var inputs = document.querySelectorAll('.mdc-text-field__input');
