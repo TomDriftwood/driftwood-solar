@@ -134,7 +134,7 @@ $(document).ready(function () {
         // get the first card
         var firstCard = carouselNavCards[0];
         // get the width of the first card
-        var cardWidth = firstCard.offsetWidth;
+        var cardWidth = 2 * firstCard.offsetWidth;
         // scroll the carousel to the right by the width a card
         carouselContainer.scrollBy(cardWidth, 0);
     });
@@ -147,7 +147,7 @@ $(document).ready(function () {
         // get next card
         var firstCard = carouselNavCards[0];
         // get the width of the first card
-        var cardWidth = firstCard.offsetWidth;
+        var cardWidth = 2 * firstCard.offsetWidth;
         // scroll the carousel to the left by the width of a card
         carouselContainer.scrollBy(-cardWidth, 0);
     });
