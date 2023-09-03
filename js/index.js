@@ -34,7 +34,7 @@ $(document).ready(function () {
     $('#close-modal-calculator').click(function () {
         $('#modal-calculator').css('display', 'none');
     });
-    
+
 
     // add event listener to classes 'carousel-button'
     $('.carousel-button').click(function () {
@@ -125,6 +125,36 @@ $(document).ready(function () {
         });
     }
 
+    // get the nav buttons with id 'carousel-nav-button-right' and 'carousel-nav-button-left'
+    var carouselNavButtonRight = document.getElementById('carousel-nav-button-right');
+    var carouselNavButtonLeft = document.getElementById('carousel-nav-button-left');
+    // add event listener to the buttons
+    carouselNavButtonRight.addEventListener('click', function () {
+        console.log('clicked right');
+        var carouselNavCards = document.querySelectorAll('#carousel-nav-card');
+        // scroll the carousel to the right
+        // get the first card
+        var firstCard = carouselNavCards[0];
+        // get the width of the first card
+        var cardWidth = firstCard.offsetWidth;
+
+        for (var i = 0, carouselNavCard; carouselNavCard = carouselNavCards[i]; i++) {
+            carouselNavCard.scrollBy(cardWidth, 0);
+        }
+    });
+    carouselNavButtonLeft.addEventListener('click', function () {
+        console.log('left');
+        var carouselNavCards = document.querySelectorAll('#carousel-nav-card');
+        // scroll the carousel to the left
+        // get the first card
+        var firstCard = carouselNavCards[0];
+        // get the width of the first card
+        var cardWidth = firstCard.offsetWidth;
+        for (var i = 0, carouselNavCard; carouselNavCard = carouselNavCards[i]; i++) {
+            carouselNavCard.scrollBy(-cardWidth, 0);
+        }
+    });
+
     // add event listener to banner with id 'energy-banner-card'
     var energyBannerCard = document.getElementById('energy-banner-card');
     energyBannerCard.addEventListener('click', function () {
@@ -195,7 +225,7 @@ $(document).ready(function () {
 
         amortisationParagraph.innerHTML = amortization + ' CHF pro Jahr <br>' + amortizationTime.toFixed(2) + ' Jahre';
         savingsParagraph.innerHTML = savingMoney + ' CHF pro Jahr<br>' + savingEnergy + ' kWh pro Jahr';
-        einspeisungsParagraph.innerHTML = 'Import: '+ moneyNetwork + ' CHF pro Jahr (' + energyNetwork + ' kWh)<br>' + 'Export: ' + moneyReturn + ' CHF pro Jahr (' + energyReturn + ' kWh)';
+        einspeisungsParagraph.innerHTML = 'Import: ' + moneyNetwork + ' CHF pro Jahr (' + energyNetwork + ' kWh)<br>' + 'Export: ' + moneyReturn + ' CHF pro Jahr (' + energyReturn + ' kWh)';
         energybillParagraph.innerHTML = energyBill + ' CHF pro Jahr';
 
         //show the cards
