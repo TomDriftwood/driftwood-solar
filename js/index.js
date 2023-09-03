@@ -65,7 +65,6 @@ $(document).ready(function () {
     // Planning Section
     const cards = document.querySelectorAll("ul.timeline li");
 
-    // add an event listener to each card
     cards.forEach((card) => {
         card.addEventListener("click", () => {
             var nextCards = card.nextElementSibling;
@@ -130,29 +129,27 @@ $(document).ready(function () {
     var carouselNavButtonLeft = document.getElementById('carousel-nav-button-left');
     // add event listener to the buttons
     carouselNavButtonRight.addEventListener('click', function () {
-        console.log('clicked right');
         var carouselNavCards = document.querySelectorAll('#carousel-nav-card');
-        // scroll the carousel to the right
+        var carouselContainer = document.getElementsByClassName('card-carousel-container')[0];        // scroll the carousel to the right
         // get the first card
         var firstCard = carouselNavCards[0];
         // get the width of the first card
         var cardWidth = firstCard.offsetWidth;
-
-        for (var i = 0, carouselNavCard; carouselNavCard = carouselNavCards[i]; i++) {
-            carouselNavCard.scrollBy(cardWidth, 0);
-        }
+        // scroll the carousel to the right by the width a card
+        carouselContainer.scrollBy(cardWidth, 0);
     });
     carouselNavButtonLeft.addEventListener('click', function () {
-        console.log('left');
         var carouselNavCards = document.querySelectorAll('#carousel-nav-card');
-        // scroll the carousel to the left
-        // get the first card
+        // get the carousel container with class 'card-carousel-container'
+        var carouselContainer = document.getElementsByClassName('card-carousel-container')[0];
+
+        console.log(carouselContainer)
+        // get next card
         var firstCard = carouselNavCards[0];
         // get the width of the first card
         var cardWidth = firstCard.offsetWidth;
-        for (var i = 0, carouselNavCard; carouselNavCard = carouselNavCards[i]; i++) {
-            carouselNavCard.scrollBy(-cardWidth, 0);
-        }
+        // scroll the carousel to the left by the width of a card
+        carouselContainer.scrollBy(-cardWidth, 0);
     });
 
     // add event listener to banner with id 'energy-banner-card'
