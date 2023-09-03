@@ -160,6 +160,7 @@ h3 {
 .side-by-side {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    background-color: var(--color-accent);
 }
 
 .text-container {
@@ -576,7 +577,7 @@ ul.timeline li::before {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 1em;
-    margin: 0 1em 0 1em;
+    margin: 0 .5em 0 .5em;
     justify-items: center;
 }
 
