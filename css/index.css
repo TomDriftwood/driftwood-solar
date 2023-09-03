@@ -365,8 +365,6 @@ td {
 }
 
 .mdc-card {
-    /* initially the cards are hidden*/
-    display: none;
     margin-top: 1.5em;
     background-color: var(--color-accent);
     color: var(--text-primary);
@@ -395,7 +393,7 @@ td {
 /* FACILITY TYPES */
 .facility-types {
     /* set the background color*/
-    background-color: var(--color-accent);
+    background-color: var(--color-primary);
     color: var(--text-primary);
     font-family: Space-Grotesk;
     font-size: 1.2em;
@@ -457,7 +455,7 @@ td {
 
 .planning-section {
     /* set the background color*/
-    background-color: var(--color-primary);
+    background-color: var(--color-accent);
     color: var(--text-primary);
     font-family: Space-Grotesk;
     font-size: 1.2em;
@@ -474,7 +472,7 @@ ul.timeline {
     justify-content: center;
     width: 100%;
     /* make everything on the same line*/
-    align-items: center;    
+    align-items: center;
 
 }
 
@@ -536,10 +534,68 @@ ul.timeline li::before {
     font-family: var(--font-secondary);
     margin: 0 11vw 1em 11.7vw;
     font-size: 0.75em;
-    min-height: 8em;   
+    min-height: 8em;
 }
 
 #timeline-button {
     margin: 0 11vw 5vh 11.7vw;
     font-size: 0.55em;
+}
+
+
+/*-------------------ARTICLES-------------------*/
+.article-section {
+    /* set the background color*/
+    background-color: var(--color-primary);
+    color: var(--text-primary);
+    font-family: Space-Grotesk;
+    font-size: 1.2em;
+    margin: 0 auto;
+    padding: 2vw 2vw;
+}
+
+/* the div with class 'card-carousel' is a grid with 3 columns*/
+/* the first column and the last column will be used for the arrow buttons*/
+/* the second column will be used for the cards, which will be another grid*/
+.card-carousel {
+    display: grid;
+    grid-template-columns: 2.5vw 85vw 2.5vw;
+    column-gap: 1em;
+    margin: 0 1em 5em 1em;
+    align-items: center;
+
+}
+
+.card-carousel-container {
+    /* this is a grid with 3 columns*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* space between the cards*/
+    column-gap: 1em;
+    /* space between the cards and the arrows*/
+    margin: 0 1em 0 1em;
+    /* center the cards*/
+    justify-items: center;
+}
+
+#carousel-nav-button {
+    height: 5em;
+    width: 5em;
+}
+
+#carousel-nav-button span {
+    border-radius: 100px;
+}
+
+.mdc-card__media {
+    border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+}
+
+#carousel-nav-card {
+    padding: 0;
+}
+
+.mdc-card_content {
+    padding: 0.5em 1em 1em 1em;
 }
