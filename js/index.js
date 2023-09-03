@@ -188,7 +188,7 @@ $(document).ready(function () {
 
         amortisationParagraph.innerHTML = amortization + ' CHF pro Jahr <br>' + amortizationTime.toFixed(2) + ' Jahre';
         savingsParagraph.innerHTML = savingMoney + ' CHF pro Jahr<br>' + savingEnergy + ' kWh pro Jahr';
-        einspeisungsParagraph.innerHTML = moneyNetwork + ' CHF pro Jahr (' + energyNetwork + ' kWh)<br>' + moneyReturn + ' CHF pro Jahr (' + energyReturn + ' kWh)';
+        einspeisungsParagraph.innerHTML = 'Import: '+ moneyNetwork + ' CHF pro Jahr (' + energyNetwork + ' kWh)<br>' + 'Export: ' + moneyReturn + ' CHF pro Jahr (' + energyReturn + ' kWh)';
         energybillParagraph.innerHTML = energyBill + ' CHF pro Jahr';
 
         //show the cards
