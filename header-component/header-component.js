@@ -21,55 +21,60 @@ $(document).ready(function () {
                 <ul>
                     <li><a
                             href="../Planung.html">Planung</a>
-                        <ul class="dropdown">
-                            <li><a
-                                    href="https://www.notion.so/valentinfrlch/Planung-Kosten-813126c4f9864b6d963c1f7de4960b45?pvs=4#815d6fdad2d44befa6157c74ec9754d2">Projektablauf</a>
-                            </li>
-                            <li><a
-                                    href="https://www.notion.so/valentinfrlch/Planung-Kosten-813126c4f9864b6d963c1f7de4960b45?pvs=4#6cd12c139e4e4155b52e80c1431248f8">Kosten</a>
-                            </li>
-                        </ul>
                     </li>
 
                     <li><a
-                            href="https://www.notion.so/valentinfrlch/Anlagetypen-aff1bac2fc0b4ce3bbf0ac68776e4a3c">Anlagetypen</a>
+                            href="../Anlagetypen.html">Anlagetypen</a>
                         <ul class="dropdown">
                             <li><a
-                                    href="https://www.notion.so/valentinfrlch/Anlagetypen-aff1bac2fc0b4ce3bbf0ac68776e4a3c?pvs=4#3db49f37bc28478ba6a170eb50c253a1">Balkonkraftwerke</a>
+                                    href="../Anlagetypen.html#af4fa0b4-b678-4ad5-b991-d47904d89ca4">Balkonkraftwerke</a>
                             </li>
                             <li><a
-                                    href="https://www.notion.so/valentinfrlch/Anlagetypen-aff1bac2fc0b4ce3bbf0ac68776e4a3c?pvs=4#8262db99b2a243589d4810276e1fc61f">Einfache
+                                    href="../Anlagetypen.html#8262db99-b2a2-4358-9d48-10276e1fc61f">Einfache
                                     PV-Anlagen</a></li>
                             <li><a
-                                    href="https://www.notion.so/valentinfrlch/Anlagetypen-aff1bac2fc0b4ce3bbf0ac68776e4a3c?pvs=4#fe704d235c5e45e68806426d75ef469a">Smarte
+                                    href="../Anlagetypen.html#fe704d23-5c5e-45e6-8806-426d75ef469a">Smarte
                                     PV-Anlagen</a></li>
                         </ul>
                     </li>
 
                     <li><a
-                            href="https://www.notion.so/valentinfrlch/Komponenten-3064771db50f47efba779fd150838f0c">Komponenten</a>
+                            href="../Komponenten.html">Komponenten</a>
                         <ul class="dropdown">
                             <li><a
-                                    href="https://www.notion.so/valentinfrlch/Komponenten-3064771db50f47efba779fd150838f0c?pvs=4#c3be0fd203a5484691e5df9cb91df6dd">Solarzellen</a>
+                                    href="../Komponenten.html#628b8646-10e7-4dc5-bbf5-1343cc288896">Solarmodule</a>
                             </li>
                             <li><a
-                                    href="https://www.notion.so/valentinfrlch/Komponenten-3064771db50f47efba779fd150838f0c?pvs=4#22eb3683c46f4a71aaf838a845806175">Wechselrichter</a>
+                                    href="../Komponenten.html#9e86f3ca-3156-4eda-b7e4-ff65b7664b2e">Optimierer</a>
                             </li>
                             <li><a
-                                    href="https://www.notion.so/valentinfrlch/Komponenten-3064771db50f47efba779fd150838f0c?pvs=4#32bbd0af401d4b08a40e43a5225775da">Batterien</a>
+                                    href="../Komponenten.html#22eb3683-c46f-4a71-aaf8-38a845806175">Wechselrichter</a>
+                            </li>
+                            <li><a
+                                    href="../Komponenten.html#a94e6d68-054a-4a81-96a9-26427c081596">Batterien</a>
+                            </li>
+                            <li><a
+                                    href="../Komponenten.html#181e7ce2-5be9-483d-ba79-b733705ec10b">Wallbox</a>
+                            </li>
+                            <li><a
+                                    href="../Komponenten.html#a07ce957-8ba4-418f-a481-a2fc76ac0715">Energiemanagement</a>
                             </li>
                         </ul>
                     </li>
 
                     <li><a
-                            href="https://www.notion.so/valentinfrlch/Strompreismarkt-6b05a91313814dc6841de67db728289b">Strommarkt</a>
+                            href="../Strompreismarkt.html">Strommarkt</a>
                         <ul class="dropdown">
                             <li><a
-                                    href="https://www.notion.so/valentinfrlch/Strompreismarkt-6b05a91313814dc6841de67db728289b?pvs=4#64ed3b58ec5d42f4bb0ede82ebe52065">Strompreise</a>
+                                    href="../Strompreismarkt.html#64ed3b58-ec5d-42f4-bb0e-de82ebe52065">Weshalb ist der Strompreis stark angestiegen?</a>
                             </li>
                             <li><a
-                                    href="https://www.notion.so/valentinfrlch/Strompreismarkt-6b05a91313814dc6841de67db728289b?pvs=4#4a423b7c6b4a48f8aa256a5dfcf6a348">Wie
-                                    entwickeln sich die Strompreise in der Zukunft</a></li>
+                                    href="../Strompreismarkt.html#4a423b7c-6b4a-48f8-aa25-6a5dfcf6a348">Grosse Tagesschwankungen an den Strombörsen</a>
+                            </li>
+                            <li><a
+                                    href="../Strompreismarkt.html#b8bced1c-cdc0-47aa-a815-d1387cf00da6">Wie
+                                    entwickeln sich die Strompreise in der Zukunft</a>
+                            </li>
                         </ul>
                     </li>
 
