@@ -1,0 +1,73 @@
+@font-face {
+    font-family: Space-Grotesk;
+    src: url(../assets/fonts/space-grotesk.ttf);
+    --webkit-font-smoothing: antialiased;
+    --moz-osx-font-smoothing: grayscale;
+}
+
+/* set variables for colors*/
+:root {
+    --color-primary: #242636;
+    --color-accent: #2e3145;
+    --color-secondary: #e3b753;
+    --color-tertiary: #2F3E2A;
+    --text-primary: #ffffff;
+    --text-secondary: #565656;
+}
+
+.footer-component {
+    bottom: 0;
+    width: 100%;
+    background-color: var(--color-tertiary);
+    color: white;
+    text-decoration: none;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: left;
+    justify-items: left;
+    padding: 1em;
+}
+
+.logo {
+    width: 5vw;
+    min-width: 100px;
+    left: 0;
+    padding: 0.5em;
+}
+
+.footer-links a {
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    padding: 0.5em 0.5em 0 0.5em;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-contact a {
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    padding: 0em 0.5em 0.5em 0.5em;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-contact p {
+    font-size: 0.7em;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: left;
+        padding: 0.5em;
+        color: white;
+        text-decoration: none;
+        margin: 0;
+}
