@@ -10,7 +10,6 @@
     --color-primary: #242636;
     --color-accent: #2e3145;
     --color-secondary: #e3b753;
-    --color-tertiary: #2F3E2A;
     --text-primary: #ffffff;
     --text-secondary: #565656;
 }
@@ -18,7 +17,7 @@
 .footer-component {
     bottom: 0;
     width: 100%;
-    background-color: var(--color-tertiary);
+    background-color: var(--color-accent);
     color: white;
     text-decoration: none;
 }
@@ -44,7 +43,7 @@
     flex-direction: column;
     align-items: left;
     justify-content: left;
-    padding: 0.5em 0.5em 0 0.5em;
+    padding: 0.8em 0.5em 0 0.5em;
     color: white;
     text-decoration: none;
 }
@@ -55,7 +54,7 @@
     flex-direction: column;
     align-items: left;
     justify-content: left;
-    padding: 0em 0.5em 0.5em 0.5em;
+    padding: 0.8em 0.5em 0.5em 0.5em;
     color: white;
     text-decoration: none;
 }

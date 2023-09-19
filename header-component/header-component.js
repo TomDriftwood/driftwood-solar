@@ -82,11 +82,6 @@ $(document).ready(function () {
                 </li>
                 </ul>
             </nav>
-            <span class="material-symbols-rounded" id="about-icon">
-                <a id="about-icon" href="https://www.notion.so/valentinfrlch/ber-uns-25454e305320481a9e8d5fa14cfd741c">
-                    info
-                </a>
-            </span>
         </div>
         `;
 
