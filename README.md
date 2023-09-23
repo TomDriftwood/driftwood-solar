@@ -1,6 +1,7 @@
 # Solar by Driftwood
 
-<img width="700" alt="image" src="https://github.com/TomDriftwood/driftwood-solar/assets/85313672/45f10574-21d7-4def-bde5-87200d8b120e">
+<img width="700" alt="image" src="https://github.com/TomDriftwood/driftwood-solar/assets/85313672/acdf5a90-ec41-4cdd-86ca-8a330dd1baa2">
+
 
 [Live Site](https://tomdriftwood.github.io/driftwood-solar)
 
