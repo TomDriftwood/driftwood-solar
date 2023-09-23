@@ -40,19 +40,32 @@
 .footer-links a {
     font-size: 0.8em;
     display: flex;
+    flex-direction: row;
+    row-gap: 2em;
+    align-items: left;
+    justify-content: left;
+    padding: 0.3em 0.5em 0 0.5em;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links p {
+    font-size: 0.8em;
+    font-weight: bold;
+    display: flex;
     flex-direction: column;
     align-items: left;
     justify-content: left;
-    padding: 0.8em 0.5em 0 0.5em;
+    padding: 1em 0.5em 0.5em 0.5em;
     color: white;
     text-decoration: none;
+    margin: 0;
 }
 
 .footer-contact a {
     font-size: 0.8em;
     display: flex;
     flex-direction: column;
-    align-items: left;
     justify-content: left;
     padding: 0.8em 0.5em 0.5em 0.5em;
     color: white;
@@ -65,7 +78,7 @@
         flex-direction: column;
         align-items: left;
         justify-content: left;
-        padding: 0.5em;
+        padding: 3.7em 0.5em;
         color: white;
         text-decoration: none;
         margin: 0;

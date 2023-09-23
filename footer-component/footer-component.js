@@ -18,12 +18,13 @@ $(document).ready(function () {
      <div class="footer-content">
             <a href="../index.html"><img src="../assets/images/logo_round.webp" alt="Driftwood Solar Logo" class="logo"></a>
             <div class="footer-links">
-                <a href="../index.html">Home</a>
-                <a href="../about.html">About</a>
-                <a href="../contact.html">Contact</a>
+                <p>Kontakt</p>
+               
+                 <a href="mailto:driftwod-solar@gmail.com"> <span class="material-symbols-rounded">
+                    mail
+                </span>Mail</a>
             </div>
             <div class="footer-contact">
-                <a href="mail:driftwod-solar@gmail.com">Mail</a>
                 <p>© Driftwood Solar, Zürcher Oberland, Schweiz
         </div>
         `;
